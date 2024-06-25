@@ -288,7 +288,6 @@ function applySpeedFilter(speed) {
     );
 }
 
-// Create a custom control for the slider
 const sliderControl = L.Control.extend({
     onAdd: function(map) {
         const sliderContainer = L.DomUtil.create('div', 'slider-container');
@@ -297,7 +296,7 @@ const sliderControl = L.Control.extend({
             connect: [true, false],
             range: {
                 'min': 0,
-                'max': 120 // Example max value, set according to your data
+                'max': 120 
             },
             tooltips: true,
             format: {
@@ -320,7 +319,7 @@ const sliderControl = L.Control.extend({
     }
 });
 
-// Add the slider control to the map
+
 map.addControl(new sliderControl({ position: 'topright' }));
 // Function to filter WFS data based on average speed
 function filter_roads(averageSpeed) {
